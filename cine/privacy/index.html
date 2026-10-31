@@ -1,52 +1,148 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>光影播放器隐私政策</title>
-<style>
-  body { font-family: -apple-system, "HarmonyOS Sans SC", "Microsoft YaHei", sans-serif; max-width: 720px; margin: 0 auto; padding: 24px 20px 48px; color: #1a1a1a; background: #fafafa; line-height: 1.75; }
-  h1 { font-size: 24px; text-align: center; margin-bottom: 4px; }
-  .meta { text-align: center; color: #666; font-size: 14px; margin-bottom: 32px; }
-  h2 { font-size: 18px; margin-top: 28px; }
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>光影播放器 (Cine) 隐私声明</title>
+  <style>
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; line-height: 1.6; color: #333; max-width: 800px; margin: 0 auto; padding: 20px; }
+    h1 { color: #1A1A1A; border-bottom: 2px solid #C8402E; padding-bottom: 10px; }
+    h2 { color: #C8402E; margin-top: 30px; }
+    h3 { color: #555; }
+    code { background: #f5f5f7; padding: 2px 6px; border-radius: 4px; font-size: 14px; }
+    .highlight { background: #fdf3f1; padding: 15px; border-left: 4px solid #C8402E; margin: 15px 0; }
+    .warning { background: #fff4e6; padding: 15px; border-left: 4px solid #FFA726; margin: 15px 0; }
+    table { width: 100%; border-collapse: collapse; margin: 15px 0; }
+    th, td { border: 1px solid #ddd; padding: 10px; text-align: left; }
+    th { background: #f5f5f5; }
+    .footer { margin-top: 40px; padding-top: 20px; border-top: 1px solid #eee; color: #666; font-size: 14px; }
+  </style>
 </head>
 <body>
-<h1>光影播放器隐私政策</h1>
-<p class="meta">生效日期：2026年10月30日</p>
+  <h1>光影播放器 (Cine) 隐私声明</h1>
+  <p><strong>更新日期：</strong>2026-10-30</p>
+  <p><strong>生效日期：</strong>2026-10-30</p>
+  <p><strong>软件包名：</strong><code>com.zjy.cine</code></p>
 
-<h2>引言</h2>
-<p>光影播放器（Cine）是一款纯本地视频播放器。我们高度重视你的隐私，本政策说明应用如何处理你的数据。</p>
+  <div class="highlight">
+    <p><strong>核心承诺：</strong>光影播放器 (Cine) 是一款纯本地视频播放器。默认在本机解码播放，不云同步、不统计播放行为。仅当您主动开启投播并选择接收设备时，通过系统投播服务向该设备传输当前视频及必要的播放信息，不上传至本应用运营者服务器。从专属下载目录导入时只保存文件引用与元数据；从文件管理导入时按您的选择复制到应用沙箱。缩略图、截图及其说明只保存在本机，保存相册由系统向您确认。</p>
+  </div>
 
-<h2>我们收集哪些信息</h2>
-<p>光影播放器不收集、不上传任何个人信息，没有账号体系，不提供云同步，也没有任何统计分析、广告或推送。以下数据仅保存在你的设备本地：</p>
-<ul>
-<li>片库索引：视频文件引用、片名、所在文件夹、时长、体积、分辨率等元数据；</li>
-<li>播放进度与播放列表状态，用于续播和恢复上次播放；</li>
-<li>封面缩略图与你主动截取的视频截图（保存到系统相册前均经你确认）；</li>
-<li>界面与播放设置（主题、排序、播放模式等）。</li>
-</ul>
-<p>卸载应用后，沙箱内的数据随之清除；已保存到系统相册的截图由你在系统图库中管理。</p>
+  <h2>1. 我们收集的信息</h2>
 
-<h2>权限使用说明</h2>
-<p><strong>网络状态（ohos.permission.GET_NETWORK_INFO）</strong>：仅用于在播放页状态条显示当前网络连接类型（Wi-Fi / 移动网络等），不传输任何数据。</p>
-<p><strong>震动（ohos.permission.VIBRATE）</strong>：进度条拖动到片头/片尾边界等操作时提供轻微震动反馈。</p>
-<p><strong>文件访问持久化（ohos.permission.FILE_ACCESS_PERSIST）</strong>：记住你通过系统选择器授权的目录，避免每次导入视频时重复授权；只在你选择的目录内读取视频文件。</p>
-<p><strong>握持检测（ohos.permission.DETECT_GESTURE）</strong>：根据握持手状态将视频封面显示在非握持侧，只读取握持姿态，不采集屏幕内容。</p>
-<p><strong>后台运行（ohos.permission.KEEP_BACKGROUND_RUNNING）</strong>：将播放注册为音频长时任务，使锁屏或切到后台后视频可以继续播放。</p>
-<p><strong>投播</strong>：投播的设备发现、连接与传输由系统投播服务处理，仅在你要主动投播并选择接收设备后，向该设备传输当前视频与播放控制信息，不上传至任何运营者服务器。</p>
+  <h3>1.1 本地存储数据</h3>
+  <p>我们仅在您的设备本地存储以下信息：</p>
+  <ul>
+    <li><strong>片库索引</strong>：视频文件 URI、片名（初始取自文件名，可由您重命名）、所在文件夹、扩展名、时长（毫秒）、体积（字节）、分辨率（宽×高）、入库时间</li>
+    <li><strong>播放设置</strong>：播放模式、音量、播放速度、当前视频 URI 与下标</li>
+    <li><strong>续播位</strong>：按视频 URI 独立保存的播放进度（毫秒）</li>
+    <li><strong>本地图像</strong>：视频封面缩略图；您主动截取的 JPEG 视频帧，以及对应视频标题、URI、播放位置、创建时间和已保存相册标记。截图默认每张请求保存相册，也可先留在应用内后批量保存。</li>
+    <li><strong>外观设置</strong>：主题色索引、深色模式开关</li>
+    <li><strong>列表设置</strong>：排序方式</li>
+    <li><strong>界面设置</strong>：系统音量弹窗与系统状态栏偏好、握持与播放方向设置</li>
+    <li>使用 Preferences API 存储于应用沙盒目录</li>
+  </ul>
 
-<h2>数据存储与安全</h2>
-<p>所有应用数据存储在设备本地的应用沙箱中，受系统级隔离保护。片库可在「设置 → 清空片库」中一键清空；视频可移入回收站或彻底删除；截图保存相册前由系统逐次或分批向你确认。应用不集成任何第三方 SDK。</p>
+  <h3>1.2 我们不收集的信息</h3>
+  <ul>
+    <li>个人身份信息（姓名、邮箱、电话等）</li>
+    <li>设备标识符（IMEI、OAID、IDFV 等）</li>
+    <li>位置信息</li>
+    <li>通讯录、联系人信息</li>
+    <li>短信、通话记录</li>
+    <li>账号信息、登录凭证（本应用无登录功能）</li>
+    <li>视频、缩略图和截图的运营者服务器副本（用户主动投播至所选接收设备除外）</li>
+    <li>任意相册图片（截图导出只写入系统确认创建的目标，不遍历您的相册）</li>
+    <li>播放行为统计、观看时长、内容偏好（无埋点）</li>
+  </ul>
 
-<h2>未成年人</h2>
-<p>应用不面向儿童设计，不收集任何年龄相关信息。</p>
+  <h3>1.3 主动投播与播放器状态</h3>
+  <p>投播设备发现、认证和连接由系统服务处理，只有您主动选择设备后才传输视频与播放控制信息。播放器仅为当前状态条读取电量和网络连接类型，内置字幕和音轨在本机解析，不统计您的观看内容。</p>
 
-<h2>政策更新</h2>
-<p>若本政策发生变更，我们将在应用内或本页面公示。</p>
+  <h2>2. 数据存储与保护</h2>
 
-<h2>联系我们</h2>
-<p>开发者：赵继源</p>
-<p>电子邮箱：<a href="mailto:2331032123@qq.com">2331032123@qq.com</a></p>
+  <h3>2.1 存储位置</h3>
+  <p>应用内视频副本、封面和截图等文件保存在设备本地的应用沙箱中；片库与设置由本地 Preferences 管理。应用文件目录为：</p>
+  <p><code>/data/app/el2/100/base/com.zjy.cine/haps/entry/files/</code></p>
+  <p>专属下载目录中的视频按文件引用导入；通过文件管理导入的视频会复制到应用沙箱。视频元数据与封面仅用于本机片库。截图保存在沙箱 <code>screenshots/</code> 中，默认相册保存成功后会清除该临时截图，取消或失败则保留供后续处理；选择先存应用内时保留原图及记录。相册导出通过一次系统确认批量创建目标后写入图片，每批最多 100 张。</p>
+
+  <h3>2.2 数据保护</h3>
+  <ul>
+    <li>应用内数据存储于私有目录；专属下载视频保留在本地下载目录，已导出图片保留在系统相册</li>
+    <li>卸载应用时系统会一并清除沙盒内所有数据</li>
+    <li>片库可在「设置 → 清空片库」中手动一键清空</li>
+    <li>视频长按进入选择后可执行移入回收站或彻底删除；应用内截图在截图管理中单独清理</li>
+  </ul>
+
+  <h2>3. 权限说明</h2>
+
+  <table>
+    <tr>
+      <th>权限</th>
+      <th>类型</th>
+      <th>用途</th>
+    </tr>
+    <tr>
+      <td><code>ohos.permission.GET_NETWORK_INFO</code></td>
+      <td>system_grant</td>
+      <td>播放页状态条显示当前网络连接类型（Wi-Fi / 移动网络 / 以太网 / 离线），不传输任何数据。</td>
+    </tr>
+    <tr>
+      <td><code>ohos.permission.VIBRATE</code></td>
+      <td>system_grant</td>
+      <td>进度条拖动到片头/片尾边界等操作时给予轻微震动反馈。</td>
+    </tr>
+    <tr>
+      <td><code>ohos.permission.FILE_ACCESS_PERSIST</code></td>
+      <td>system_grant</td>
+      <td>记忆您通过系统选择器授权的目录，避免每次导入重复授权；只在您选择的目录内读取视频文件。</td>
+    </tr>
+    <tr>
+      <td><code>ohos.permission.DETECT_GESTURE</code></td>
+      <td>system_grant</td>
+      <td>根据握持手状态将视频封面显示在非握持侧，只读取握持姿态，不采集触屏内容。</td>
+    </tr>
+    <tr>
+      <td><code>ohos.permission.KEEP_BACKGROUND_RUNNING</code></td>
+      <td>system_grant</td>
+      <td>将播放注册为 <code>AUDIO_PLAYBACK</code> 长时任务，使锁屏、切后台后视频继续播放。</td>
+    </tr>
+    <tr>
+      <td>系统相册创建确认</td>
+      <td>每次由系统确认保存的图片数量</td>
+      <td>只在您点击保存并同意后写入本次截图，不申请读取整个相册的权限。camera 图标用于视频抽帧，不调用摄像头或系统录屏。</td>
+    </tr>
+  </table>
+
+  <div class="warning">
+    <p><strong>关于后台播放权限：</strong><code>KEEP_BACKGROUND_RUNNING</code> 属系统级授权。开发调试阶段可直接申请；正式签名上架需在 AppGallery Connect 申请 ACL 白名单。若未获授权，光影播放器会静默降级为前台播放，不会弹窗索要额外权限，也不会因此收集任何信息。</p>
+  </div>
+
+  <p><strong>关于文件访问：</strong>文件管理导入由您在系统选择器中主动选择；从下载目录导入只扫描系统提供的 Cine 专属下载目录及其子目录，用文件引用加入片库，重复文件跳过。</p>
+
+  <h2>4. 第三方服务</h2>
+  <p>光影播放器不集成任何第三方 SDK：无统计 SDK、无广告 SDK、无推送 SDK、无分享 SDK、无崩溃上报、无支付、无账号登录。所有播放能力由 HarmonyOS 系统 Kit 提供（Media Kit、AVSession Kit、BackgroundTasks Kit、ArkUI Kit）。</p>
+
+  <h2>5. 儿童保护</h2>
+  <p>本应用不面向儿童设计，不涉及儿童个人信息。应用不提供任何面向儿童的交互或数据收集，也不做内容分级或儿童内容过滤。</p>
+
+  <h2>6. 数据删除</h2>
+  <ul>
+    <li><strong>移入回收站：</strong>保留文件供恢复；彻底删除只处理 Cine 管理且可确认所有权的本地文件</li>
+    <li><strong>清空片库：</strong>设置页「清空片库」，删除全部 URI 与元数据</li>
+    <li><strong>截图清理：</strong>截图管理只清除应用内 JPEG 和记录，不删除相册中的图片；相册图片由您在系统图库中管理</li>
+    <li><strong>彻底清除：</strong>卸载应用，系统清除全部沙盒数据，已保存相册的图片仍保留</li>
+  </ul>
+  <p>从列表移除与移入回收站不会删除本地文件；彻底删除将删除 Cine 管理的副本。请按操作确认中的说明选择。</p>
+
+  <h2>7. 本声明的更新</h2>
+  <p>如本声明有重大变更，将在应用内提示更新。当前版本未集成任何远程通知或推送能力，因此声明变更以应用版本更新形式提供。</p>
+
+  <h2>8. 联系我们</h2>
+  <p>如有隐私相关问题，请发送邮件至 <code>2331032123@qq.com</code>，或通过应用市场详情页的「开发者联系方式」与我们联系。</p>
+
+  <div class="footer">
+    <p>光影播放器 (Cine) · 纯本地视频播放器 · 2026</p>
+  </div>
 </body>
 </html>
