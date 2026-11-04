@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>拾惠 Perk · 不错过任何一个到期权益</title>
+<style>
+  :root { --brand:#477B74; --brand-soft:#EAF1EF; --ink:#22332F; --muted:#5E6E69; --paper:#FBF8F3; }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { font-family:"HarmonyOS Sans","PingFang SC","Microsoft YaHei",sans-serif; background:var(--paper); color:var(--ink); line-height:1.7; }
+  .hero { background:linear-gradient(160deg,#477B74 0%,#2F5F50 100%); color:#fff; padding:72px 24px 64px; text-align:center; }
+  .hero .mark { width:88px; height:88px; border-radius:22px; background:rgba(255,255,255,.14); display:inline-flex; align-items:center; justify-content:center; font-size:44px; margin-bottom:20px; }
+  .hero h1 { font-size:40px; letter-spacing:2px; }
+  .hero p.tag { font-size:18px; opacity:.92; margin-top:10px; }
+  .cta { display:inline-block; margin-top:28px; padding:14px 36px; border-radius:26px; background:#fff; color:var(--brand); font-weight:700; text-decoration:none; font-size:16px; box-shadow:0 4px 16px rgba(0,0,0,.18); }
+  .cta.hollow { background:transparent; color:#fff; border:1.5px solid rgba(255,255,255,.75); box-shadow:none; margin-left:12px; }
+  main { max-width:880px; margin:0 auto; padding:56px 24px 72px; }
+  h2 { font-size:24px; margin:40px 0 16px; padding-left:14px; border-left:5px solid var(--brand); }
+  .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:16px; }
+  .card { background:#fff; border-radius:18px; padding:22px; box-shadow:0 2px 10px rgba(34,51,47,.06); }
+  .card b { display:block; margin-bottom:6px; font-size:16px; }
+  .card span { color:var(--muted); font-size:14px; }
+  .notice { background:var(--brand-soft); border-radius:16px; padding:20px 22px; font-size:14px; color:var(--muted); margin-top:36px; }
+  .invite { background:#fff; border:2px dashed var(--brand); border-radius:18px; padding:26px; margin-top:16px; text-align:center; }
+  .invite a { color:var(--brand); font-weight:700; word-break:break-all; }
+  .small { font-size:12px; color:var(--muted); margin-top:8px; }
+  footer { text-align:center; color:var(--muted); font-size:13px; padding:28px 16px 44px; }
+  footer a { color:var(--brand); }
+</style>
+</head>
+<body>
+<div class="hero">
+  <div class="mark">🗓️</div>
+  <h1>拾惠 Perk</h1>
+  <p class="tag">记录 AI 与平台福利的有效期，到期前提醒你用掉它</p>
+  <a class="cta" href="#invite">参加邀测</a>
+  <a class="cta hollow" href="https://fireflyzjy.github.io/perk/privacy/">隐私政策</a>
+</div>
+<main>
+  <h2>这是什么</h2>
+  <p>拾惠是一款纯本地的福利记录工具：把试用、优惠券、会员权益的截止日期记下来，按「今天截止 / 还有 N 天」自动归类，配合桌面与锁屏卡片、系统到期提醒，让你在过期前用掉它们。无账号、记录只存在你的设备上。</p>
+
+  <h2>核心功能</h2>
+  <div class="grid">
+    <div class="card"><b>⏰ 到期提醒</b><span>系统级代理提醒，支持当天 / 提前 1 天 / 提前 3 天；当天补记也会尽快提醒。</span></div>
+    <div class="card"><b>🗓️ 桌面与锁屏卡片</b><span>2×2 / 2×4 最近到期列表、1×2 / 1×1 一键添加，点击直达。</span></div>
+    <div class="card"><b>🔗 快速记录</b><span>浏览器分享链接给拾惠，或从剪贴板粘贴，自动带出链接与图标。</span></div>
+    <div class="card"><b>📁 目录 / 收藏 / 置顶</b><span>36 色主题、连续翻页顶栏、长按多选、滑动快速勾选。</span></div>
+    <div class="card"><b>💾 全量备份</b><span>本地 .perkdb 容器导出恢复，支持坚果云等 WebDAV 云备份（邀测版）。</span></div>
+    <div class="card"><b>🧹 留存统计</b><span>一键清理已结束、一键再来一期、今年已领取 / 过期未领一目了然。</span></div>
+  </div>
+
+  <h2>版本说明</h2>
+  <div class="notice">
+    应用市场正式版因上架合规暂未申请联网权限：网站图标自动获取、内置浏览器与 WebDAV 云备份在正式版中不可用（应用内已注明）。
+    完整体验请安装<b>邀测版</b>。两版均为纯本地记录，卸载即删除数据。
+  </div>
+
+  <h2 id="invite">参加邀测</h2>
+  <div class="invite">
+    <p><a href="https://appgallery.huawei.com/link/invite-test-wap?taskId=e6da909bcbd9a6202c3aab5f248f21e2&invitationCode=endHkE2rny" rel="noopener">点击加入 AppGallery 邀测 →</a></p>
+    <p class="small">（邀测链接占位符：邀测任务更新后此链接将单独更新）</p>
+  </div>
+</main>
+<footer>Perk · 拾惠 · HarmonyOS 应用 · <a href="https://fireflyzjy.github.io/perk/privacy/">隐私政策</a> · GitHub：<a href="https://github.com/FireFlyZjy">FireFlyZjy</a></footer>
+</body>
+</html>
