@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>匣子 Coffer 隐私声明</title>
+  <style>
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; line-height: 1.6; color: #333; max-width: 800px; margin: 0 auto; padding: 20px; }
+    h1 { color: #1A1A1A; border-bottom: 2px solid #C95B5B; padding-bottom: 10px; }
+    h2 { color: #C95B5B; margin-top: 30px; }
+    h3 { color: #555; }
+    code { background: #f5f5f7; padding: 2px 6px; border-radius: 4px; font-size: 14px; }
+    .highlight { background: #fdf3f3; padding: 15px; border-left: 4px solid #C95B5B; margin: 15px 0; }
+    table { width: 100%; border-collapse: collapse; margin: 15px 0; }
+    th, td { border: 1px solid #ddd; padding: 10px; text-align: left; }
+    th { background: #f5f5f5; }
+    .footer { margin-top: 40px; padding-top: 20px; border-top: 1px solid #eee; color: #666; font-size: 14px; }
+  </style>
+</head>
+<body>
+  <h1>匣子 Coffer 隐私声明</h1>
+  <p><strong>更新日期：</strong>2026-11-12</p>
+  <p><strong>生效日期：</strong>2026-11-12</p>
+  <p><strong>软件包名：</strong><code>com.example.coffer</code></p>
+
+  <div class="highlight">
+    <p><strong>核心承诺：</strong>匣子 Coffer 是一款本地优先的记账本，帮你记录收支、管理分类与预算、查看统计，并提供三重备份。所有记账数据默认仅保存在你的设备本地。应用不集成任何统计、广告或崩溃上报 SDK，不采集与记账无关的数据。网络访问只发生在你主动开启的三类时刻——本地专属目录自动备份、你自行配置的 WebDAV 服务器备份同步、以及可选的华为账号登录；此外仅在系统浏览器中打开应用介绍页。扫描导入的票据识别在设备端完成，照片经系统选择器选定后复制进应用沙箱。</p>
+  </div>
+
+  <h2>1. 我们收集的信息</h2>
+
+  <h3>1.1 本地存储数据</h3>
+  <p>我们仅在您的设备本地存储以下信息（SQLite 数据库与应用沙箱 Preferences）：</p>
+  <ul>
+    <li><strong>流水</strong>：金额、收支方向（支出/收入/攒钱）、分类、账户、日期与时间、备注、报销标记、优惠金额等记账字段</li>
+    <li><strong>分类与账户</strong>：自定义分类（含图标与排序）、资产/攒钱/订阅账户与目标</li>
+    <li><strong>预算与统计偏好</strong>：预算额度、统计模块的显隐与排序、报表周期等</li>
+    <li><strong>界面偏好</strong>：主题、底栏页面显隐与顺序、记账页字段排序、键盘与动效设置</li>
+    <li><strong>扫描导入</strong>：拍照或相册取图经端侧识别产生的候选记录，由你逐条确认后才写入账本</li>
+    <li><strong>备份配置</strong>：本地备份频率、WebDAV 服务器地址/账号/密码/远程目录（凭据仅存本机独立配置，<strong>不写入任何备份文件</strong>）</li>
+    <li><strong>华为账号资料</strong>：在你主动登录后，仅保存昵称与头像等展示信息（存本机）</li>
+  </ul>
+
+  <h3>1.2 我们不收集的信息</h3>
+  <ul>
+    <li>个人身份信息（姓名、邮箱、电话等，华为账号资料仅在你主动登录后于本机留存展示字段）</li>
+    <li>设备标识符（IMEI、OAID 等）</li>
+    <li>位置信息</li>
+    <li>通讯录、短信、通话记录</li>
+    <li>操作行为统计、使用时长、内容偏好（无埋点、无崩溃上报、无广告）</li>
+  </ul>
+
+  <h3>1.3 网络访问</h3>
+  <p>应用的网络访问只发生在以下场景，且均由你的操作或你开启的功能触发：</p>
+  <ul>
+    <li><strong>本地自动备份</strong>：按你选择的频率（关闭/每次进入/每天/每周）把完整数据库备份到系统 Download 下的应用专属目录；目录被误删后自动重建并补备份。此过程在本机文件系统内完成，不经过任何服务器。</li>
+    <li><strong>WebDAV 备份同步</strong>：仅当你自行配置了 WebDAV 服务器时，向<strong>你填写的地址</strong>上传/下载备份文件。凭据只存本机，不进入备份文件，也不发送给本应用运营者。目标服务器的数据处理遵循其自身隐私政策。</li>
+    <li><strong>华为账号登录</strong>：仅当你主动点击登录时，通过系统华为账号服务授权获取昵称/头像等展示信息，资料存于本机；可随时退出登录。</li>
+    <li><strong>打开应用介绍页</strong>：在设置→关于点击软件名，经确认后跳转系统浏览器打开本介绍页（<code>https://fireflyzjy.github.io/coffer/</code>），浏览行为由系统浏览器处理。</li>
+  </ul>
+  <p>除上述场景外，应用不向本应用运营者或任何第三方传输你的记账数据。</p>
+
+  <h2>2. 数据存储与保护</h2>
+
+  <h3>2.1 存储位置</h3>
+  <p>流水、分类、账户、预算、统计与设置保存在设备本地的应用沙箱中（SQLite 数据库与 Preferences）。本地备份写入系统 Download 下的应用专属目录；WebDAV 备份写入你配置的远程目录。应用文件目录形如：</p>
+  <p><code>/data/app/el2/100/base/com.example.coffer/haps/entry/files/</code></p>
+
+  <h3>2.2 数据保护</h3>
+  <ul>
+    <li>应用内数据存储于私有沙箱，其他应用无法访问</li>
+    <li>WebDAV 凭据与应用数据分离存放，不随备份文件传播</li>
+    <li>卸载应用时系统会一并清除沙箱内所有数据；已导出到 Download 或 WebDAV 的备份文件仍由你保管</li>
+  </ul>
+
+  <h2>3. 权限说明</h2>
+  <p>应用只申请下表所列权限，均为安装即授予的系统权限，不另行采集数据。</p>
+  <table>
+    <tr>
+      <th>权限</th>
+      <th>类型</th>
+      <th>用途</th>
+    </tr>
+    <tr>
+      <td><code>ohos.permission.INTERNET</code></td>
+      <td>system_grant</td>
+      <td>仅用于本地备份之外的在线能力：向<strong>你配置的</strong> WebDAV 服务器上传/下载备份、华为账号登录，以及经确认跳转系统浏览器打开介绍页。不用于向本应用运营者传输记账数据。</td>
+    </tr>
+    <tr>
+      <td><code>ohos.permission.GET_NETWORK_INFO</code></td>
+      <td>system_grant</td>
+      <td>检测当前网络连接状态，用于备份时机判断与连接提示，不传输任何数据。</td>
+    </tr>
+    <tr>
+      <td>系统相机/照片选择器</td>
+      <td>每次由系统确认</td>
+      <td>仅在你使用扫描导入并主动拍照或选图时触发，只读取你本次选定的图片，不申请遍历整个相册的权限；识别在设备端完成。</td>
+    </tr>
+  </table>
+
+  <h2>4. 第三方服务</h2>
+  <p>匣子 Coffer 不集成任何第三方统计、广告、推送、分享、崩溃上报或支付 SDK。华为账号登录由系统 Account Kit 提供；WebDAV 备份由应用直接与你配置的服务器通信；票据文字识别由设备端系统视觉能力完成，图像不上传服务器。</p>
+
+  <h2>5. 儿童保护</h2>
+  <p>本应用不面向儿童设计，不涉及儿童个人信息。应用不提供任何面向儿童的交互或数据收集，也不做内容分级或儿童内容过滤。</p>
+
+  <h2>6. 数据删除</h2>
+  <ul>
+    <li><strong>删除流水/分类/账户：</strong>在应用内删除后不再保留（删除账户时其流水并入「其他」账户）</li>
+    <li><strong>清空数据：</strong>设置→数据与备份提供清空账本数据</li>
+    <li><strong>退出华为账号：</strong>退出后清除本机留存的账号展示资料</li>
+    <li><strong>彻底清除：</strong>卸载应用，系统清除全部沙箱数据；已备份到 Download 专属目录或你 WebDAV 服务器的备份文件仍由你保管，可自行删除</li>
+  </ul>
+
+  <h2>7. 本声明的更新</h2>
+  <p>如本声明有重大变更，将在应用内提示更新。当前版本未集成任何远程通知或推送能力，因此声明变更以应用版本更新形式提供。线上版本见 <code>https://fireflyzjy.github.io/coffer/privacy/</code>。</p>
+
+  <h2>8. 联系我们</h2>
+  <p>如有隐私相关问题，请发送邮件至 <code>2331032123@qq.com</code>，或通过应用市场详情页的「开发者联系方式」与我们联系。</p>
+
+  <div class="footer">
+    <p>匣子 Coffer · 本地优先的记账本 · 2026</p>
+  </div>
+</body>
+</html>
