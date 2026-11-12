@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>匣子 Coffer — 本地优先的记账本</title>
+<style>
+  :root {
+    --bg: #F7F3EC;
+    --card: #FFFFFF;
+    --ink: #33302B;
+    --sub: #8A8378;
+    --accent: #C95B5B;
+    --accent-soft: rgba(201, 91, 91, 0.10);
+    --ring: rgba(51, 48, 43, 0.10);
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: "HarmonyOS Sans SC", "PingFang SC", "Microsoft YaHei", sans-serif;
+    background: var(--bg);
+    color: var(--ink);
+    line-height: 1.7;
+  }
+  .wrap { max-width: 720px; margin: 0 auto; padding: 48px 24px 64px; }
+  .hero { text-align: center; padding: 32px 0 40px; }
+  .logo {
+    width: 88px; height: 88px; border-radius: 20px; margin: 0 auto 20px;
+    display: block; box-shadow: 0 12px 32px rgba(201, 91, 91, 0.28);
+  }
+  h1 { font-size: 34px; letter-spacing: 2px; }
+  .hero p.sub { color: var(--sub); margin-top: 10px; font-size: 16px; }
+  .hero p.slogan { margin-top: 18px; font-size: 18px; font-weight: 600; }
+  .card {
+    background: var(--card); border: 1px solid var(--ring); border-radius: 20px;
+    padding: 26px 26px 22px; margin-bottom: 18px;
+  }
+  .card h2 { font-size: 18px; margin-bottom: 10px; display: flex; align-items: center; gap: 10px; }
+  .dot { width: 10px; height: 10px; border-radius: 50%; background: var(--accent); display: inline-block; }
+  .card p { color: var(--sub); font-size: 15px; }
+  .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+  @media (max-width: 560px) { .grid { grid-template-columns: 1fr; } }
+  .cta {
+    display: block; width: 240px; margin: 34px auto 0; text-align: center;
+    background: var(--accent); color: #FFF7F2; text-decoration: none;
+    padding: 14px 0; border-radius: 22px; font-size: 16px; font-weight: 600;
+    box-shadow: 0 10px 26px rgba(201, 91, 91, 0.30);
+  }
+  footer { text-align: center; color: var(--sub); font-size: 13px; margin-top: 44px; }
+  .pill {
+    display: inline-block; background: var(--accent-soft); color: var(--accent);
+    border-radius: 999px; padding: 3px 14px; font-size: 13px; font-weight: 600; margin-bottom: 14px;
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <section class="hero">
+    <img class="logo" src="app-icon.png" alt="匣子 Coffer 应用图标">
+    <h1>匣子 Coffer</h1>
+    <p class="sub">HarmonyOS NEXT · 本地优先的记账本</p>
+    <p class="slogan">记账清爽，数据安心：备份与同步，都由你做主。</p>
+  </section>
+
+  <div class="card">
+    <span class="pill">核心能力</span>
+    <h2><span class="dot"></span>沉浸光感记账</h2>
+    <p>两段式记账页：上半选分类、下半计算器键盘，加减乘除先求值再保存；金额带优惠时原价划线、实付紧跟显示，优惠明细只在优惠面板出现。</p>
+  </div>
+
+  <div class="grid">
+    <div class="card">
+      <h2><span class="dot"></span>扫描导入</h2>
+      <p>拍一张票，端侧 OCR 识别日期、备注与金额，批量核对后一键入账。</p>
+    </div>
+    <div class="card">
+      <h2><span class="dot"></span>报销与优惠</h2>
+      <p>报销的支出不计入花销合计；优惠金额独立核算，报表与流水口径始终一致。</p>
+    </div>
+    <div class="card">
+      <h2><span class="dot"></span>三重备份</h2>
+      <p>Download 专属目录按频率自动备份，误删自动重建；WebDAV 自配服务器同步；数据库快照随取随恢复。</p>
+    </div>
+    <div class="card">
+      <h2><span class="dot"></span>统计自定义</h2>
+      <p>概览、分类构成、每日支出、趋势、环比对比、账户分布六类模块自由显隐排序，长按即可编辑。</p>
+    </div>
+  </div>
+
+  <div class="card">
+    <span class="pill">隐私承诺</span>
+    <h2><span class="dot"></span>数据只在本机</h2>
+    <p>记账数据保存在你的设备上；联网用于账号登录与备份同步等在线服务，需要时随时可用。没有广告打扰，不收集与记账无关的数据。</p>
+  </div>
+
+  <footer>匣子 Coffer · HarmonyOS NEXT · 本地优先的记账本</footer>
+</div>
+</body>
+</html>
